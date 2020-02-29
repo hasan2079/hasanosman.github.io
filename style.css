@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background: -webkit-linear-gradient(62deg, rgba(255, 236, 19, 1) 0%, rgba(254, 173, 25, 1) 61%, rgba(57, 23, 0, 1) 99%);
+background: -o-linear-gradient(62deg, rgba(255, 236, 19, 1) 0%, rgba(254, 173, 25, 1) 61%, rgba(57, 23, 0, 1) 99%);
+background: linear-gradient(152deg, rgba(255,236,19,1) 0%, rgba(254,173,25,1) 61%, rgba(57,23,0,1) 99%);
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#index {
+    background-image: url("images/hamburgerbgimg.jpg");
+
+}
+
+
+.header {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+}
+
+
+.logo {
+    float: left;
+}
+
+.menu {
+    line-height: 20px;
+    float: right;
+    display: inline;
+    font-family: Bebas Neue;
+    /*border: 3px solid blue;*/
+}
+
+.menu li {
+    color: black;
+    list-style: none;
+    display: inline;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-size:1rem;
+    margin-left: 10px;
+    margin-right: 0;
+    /*border: 3px solid red;*/
+    
+}
+
+.current-page {
+    border: 4px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.logo,
+.sub-logo {
+    color: black;
+    font-family: "Bebas Neue";
+}
+
+.showmenuicon, .hidemenuicon {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    visibility: hidden;
+    
+}
+
+
+.showmenuicon {
+    float: right;
+    color: black;
+    font-family: Oswald;
+    font-weight: regular;
+    font-size: 1.5rem;
+}
+
+
+
+.showmenuicon i {
+    line-height: 100px;
+}
+
+.menu a:hover,
+.showmenuicon:hover,
+.hidmenuicon:hover {
+    color: white;
+}
+
+#menubutton {
+    position: absolute;
+    z-index: -5;
+    visibility: hidden;
+}
+
+footer {
+    height: 35px;   
+    background-color: rgba(255, 255, 255, 0.4); 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(31, 5, 0);
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+
+/********************
+    ABOUT PAGE
+**********************/
+
+/**
+body {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(62deg, rgba(255,236,19,1) 0%, rgba(254,173,25,1)    61%, rgba(57,23,0,1) 99%);
+    background: -o-linear-gradient(62deg, rgba(255,236,19,1) 0%, rgba(254,173,25,1) 61%, rgba(57,23,0,1) 99%);
+    background: linear-gradient(152deg, rgba(255,236,19,1) 0%, rgba(254,173,25,1) 61%, rgba(57,23,0,1) 99%);
+}
+**/
+.heading {
+    color: black;
+    padding-top: 80px;
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "bio-image bio-image bio bio"
+    "job1 job2 job3 job4";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.bio-image {
+    grid-area: bio-image;
+    margin: auto;
+    border-radius: 20%;
+}
+.bio {
+    grid-area: bio;
+    font-size:1rem;
+    color: black;
+}
+.job1 {
+    grid-area: job1;
+}
+.job2 {
+    grid-area: job2;
+}
+.job3 {
+    grid-area: job3;
+}
+.job4 {
+    grid-area: job4;
+}
+
+.job {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    border-bottom: 5px solid white;
+    font-family: "Bebas Neue" cursive;
+    text-transform: capitalize;
+    color: black;
+
+}
+/*
+footer {
+    height: 35px;   
+    background-color: rgba(250, 250, 255, 0.4); 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(31, 5, 0);
+    text-align: left;
+    padding-left: 0.5em;
+}
+*/
+
+/*********************
+    MEDIA QUERIES
+***********************/
+
+@media only screen and (max-width:678px){
+    .about-info {
+        grid-template-areas:
+        "bio-image"
+        "bio"
+        "job1"
+        "job2"
+        "job3"
+        "job4";
+
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .showmenuicon, .hidemenuicon {
+        display: block;
+    }
+
+.showmenuicon {
+    visibility: visible;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.4);
+    right: 100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    font-size: 1.5rem;
+    transition: 0.7s;
+}
+
+.current-page {
+    border: 4px solid white;
+}
+
+.menu li{
+    display: block;
+}
+.menu a{
+    display: block;
+    padding: 20px;
+}
+
+.menu a:hover,
+.showmenuicon:hover,
+.hidmenuicon:hover {
+    color: white;
+}
+
+.hidemenuicon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    visibility: visible;
+
+}
+
+#menubutton:checked ~ .menu {
+    right: 0;
+
+
+}
+}
+
+
+/**********************
+    GALLERY PAGE
+***********************/
+
+.container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+    grid-auto-flow: dense;
+    margin-top: 20px;
+}
+/*.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}*/
+
+.container > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+html, body{
+    background-color: #ffeead;
+    margin: 10px;
+}
+*/
+
+.horizontal {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.vertical {
+    grid-row: span 4;
+    grid-column: span 2;
+}
+.normal{
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+
+/********************
+    CONTACT PAGE
+************************/
+
+#contact {
+    padding-top: 80px;
+    padding-left: 20px;
+}
+
+
+
+

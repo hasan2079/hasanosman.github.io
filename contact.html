@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive Navbar and Hamburger Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald&display=swap" rel="stylesheet"> 
-    <link rel ="stylesheet" href="style.css">
+    <link rel ='stylesheet' href='style.css'>
     <script src="https://kit.fontawesome.com/13e0592400.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="index">
-    <header class="header">
+<body>
+    <header class='header'>
         <div class="logo"><a href="index.html">
             <h1>HASANOSMAN</h1>
             <p class="sub-logo">Software Engineer</p></a>
@@ -26,14 +26,19 @@
 
         <!--****-->
         <ul class="menu">
-            <li class="current-page"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <label for="menubutton" class="hidemenuicon">menu
+            <li class="current-page"><a href="contact.html">Contact</a></li>
+            <label for="menubutton" class="hidemenuicon">
                 <i class="fas fa-times"></i>
             </label>
         </ul>
     </header>
+
+    <main id="contact">
+        <p>My location:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.1697633950803!2d-0.1063425481493961!3d51.546786015542956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b7aca3ab367%3A0x6cf5e7dbe405fb8e!2sHighbury%20%26%20Islington%20Station!5e0!3m2!1sen!2suk!4v1582939663133!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </main>
 
     <footer>Copyright&copy 2020 <strong>Hasan Osman</strong>. All Rights Reserved.</footer>
 
